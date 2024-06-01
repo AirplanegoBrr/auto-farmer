@@ -1,0 +1,16 @@
+name: AutoFarmer
+version: '${project.version}'
+main: xyz.airplanegobrr.autofarmer.AutoFarmer
+api-version: '1.20'
+description: Plugin that adds auto farms to Minecraft!
+author: AirplaneGobrr
+prefix: AutoFarm
+website: https://airplanegobrr.xyz
+commands:
+  harvest:
+    description: harvest command (dev command)
+  autofarm:
+    description: Registers a new farm!
+    aliases:
+      - af
+      - farm
