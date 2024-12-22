@@ -33,6 +33,9 @@ public class autofarmTabber implements TabCompleter {
                 if (strings.length == 3 || strings.length == 6) return List.of(String.valueOf((int) loc.getY()));
                 if (strings.length == 4 || strings.length == 7) return List.of(String.valueOf((int) loc.getZ()));
             }
+            case "create": {
+                return List.of("<name>");
+            }
             default: {
                 return List.of();
             }

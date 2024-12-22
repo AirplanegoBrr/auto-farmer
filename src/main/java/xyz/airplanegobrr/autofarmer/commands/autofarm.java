@@ -1,5 +1,6 @@
 package xyz.airplanegobrr.autofarmer.commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -61,7 +62,12 @@ public class autofarm implements CommandExecutor {
                 break;
             }
             case "scan": {
-                new scaner(main).scan(((Player) sender).getLocation());
+                try {
+                    int[] info = new scaner(main).scan(((Player) sender).getLocation());
+                    sender.sendMessage(String.format("Found farm from " + ChatColor.GREEN + "[%s,%s,%s]" + ChatColor.RESET + " to " + ChatColor.GREEN + "[%s,%s,%s]" + ChatColor.RESET + " with a width and height of " + ChatColor.GREEN + "[%s,%s]", info[0], info[1], info[2], info[3], info[4], info[5], info[6], info[7]));
+                } catch (Exception e) {
+                    sender.sendMessage(ChatColor.RED+"Error scanning");
+                }
                 break;
             }
             default: {

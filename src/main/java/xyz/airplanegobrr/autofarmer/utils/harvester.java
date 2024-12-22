@@ -151,7 +151,7 @@ public class harvester {
 
                 new BukkitRunnable() {
                     public void run() {
-                        main.getLogger().info(String.valueOf(newAX) + " " + String.valueOf(newAZ));
+                        if (main.config.get("debug") == "true") main.getLogger().info(String.valueOf(newAX) + " " + String.valueOf(newAZ));
                         Location d = gb.getLocation().add(0, 1, 0);
 
                         Block oldBlock = world.getBlockAt(last[0], last[1], last[2]);

@@ -1,8 +1,8 @@
 {
   "debug": true,
   "useFuel": true,
-  "_comment_blocksPerCoal": "How many blocks can the turtle go with 1 coal",
+  "blocksPerCoal_comment": "How many blocks can the turtle go with 1 coal",
   "blocksPerCoal": 20,
-  "_comment_blockCoalCount": "How much COAL should 1 block of coal be",
+  "blockCoalCount_comment": "How much COAL should 1 block of coal be",
   "blockCoalCount": 10
 }
